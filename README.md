@@ -119,19 +119,8 @@ npm run start
 <br>
 </details>
 
-- [tdd-react](./tdd-react#readme)
-  : basic react application using jest
-
-  <details>
-  <summary>🌟 installation history</summary>
-  <br>
-
-  ```bash
-  # TODO
-  ```
-
-  <br>
-  </details>
+- [`tdd-react`](./tdd-react#readme)
+  : Basic react application using jest
 
 ### Loadmap
 
