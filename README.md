@@ -89,10 +89,49 @@ yarn -v
 
 ## Samples
 
-### react-app
+### React Application
+
+<details>
+<summary>💫 <b>create-react-app</b></summary>
+<br>
+
+```bash
+# Installing
+npm install -g create-react-app
+
+# Check
+npx create-react-app --version
+```
+
+How to use `create-react-app`
+
+```bash
+# Init
+npx create-react-app <YOUR_APP_NAME>
+
+# Launch
+cd <YOUR_APP_NAME>
+yarn start
+# or
+npm run start
+```
+
+<br>
+</details>
 
 - [tdd-react](./tdd-react#readme)
   : basic react application using jest
+
+  <details>
+  <summary>🌟 installation history</summary>
+  <br>
+
+  ```bash
+  # TODO
+  ```
+
+  <br>
+  </details>
 
 ### Loadmap
 
