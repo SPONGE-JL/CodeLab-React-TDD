@@ -12,14 +12,14 @@ describe('<App />', () => {
     expect(linkElement).toBeInTheDocument();
 
     // Check Image Tag (App-logo)
-    const elemByClass_AppLogo = container.getElementsByClassName('App-logo');
-    expect(elemByClass_AppLogo).toHaveLength(1);
-    expect(elemByClass_AppLogo[0]).toHaveAttribute('src', 'logo.svg');
+    const appLogo = screen.getByAltText("logo");
+    expect(appLogo).toBeInTheDocument();
+    expect(appLogo).toHaveAttribute('src', 'logo.svg');
 
     // Check P Tag
     const elmByP = container.getElementsByTagName('p');
     expect(elmByP).toHaveLength(1);
-    expect(elmByP[0]).toHaveTextContent('Edit src/App.js and save to reload');
+    expect(elmByP[0]).toHaveTextContent('Edit src/App.tsx and save to reload');
 
     // Snapshot
     expect(container).toMatchSnapshot();
