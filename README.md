@@ -94,7 +94,7 @@ yarn -v
 - [`tdd-react`](./tdd-react#readme)
   : Basic react application using jest
 
-- [`tdd-react-ts`](./tdd-react-ts#readme)
+- [`tdd-react-ts-porting`](./tdd-react-ts-porting#readme)
   : porting typescript from `tdd-react`
 
 - <details>
