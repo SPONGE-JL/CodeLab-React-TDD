@@ -1,6 +1,6 @@
 # TDD-React-TS-Porting
 
-Porting typescript from [`tdd-react`](../tdd-react#reademe)
+Basic react application using `typescript template`
 
 ## How to use
 
@@ -28,25 +28,25 @@ yarn test    # or | npm run test
 - Use `yarn` script
 
   ```bash
-  # testing-library for react with typescript
+  # testing-library for styled-components (on typescript-templated react)
+  yarn add \
+      styled-components
+  
   yarn add --dev \
-      typescript \
-      @types/node \
-      @types/react \
-      @types/react-dom \
-      @types/jest
+      @types/styled-components \
+      jest-styled-components
   ```
 
 - Use `npm` script
 
   ```bash
-  # testing-library for react with typescript
+  # testing-library for styled-components (on typescript-templated react)
+  npm i --save \
+      styled-components
+  
   npm i --save-dev \
-      typescript \
-      @types/node \
-      @types/react \
-      @types/react-dom \
-      @types/jest
+      @types/styled-components \
+      jest-styled-components
   ```
 
 ## Settings
