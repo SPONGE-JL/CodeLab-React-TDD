@@ -97,6 +97,9 @@ yarn -v
 - [`tdd-react-ts-porting`](./tdd-react-ts-porting#readme)
   : porting typescript from `tdd-react`
 
+- [`tdd-react-ts-template`](./tdd-react-ts-template#readme)
+  : Basic react application using `typescript template`
+
 - <details>
   <summary>💫 <b>create-react-app</b></summary>
   <br>
@@ -113,13 +116,11 @@ yarn -v
 
   ```bash
   # Init
-  npx create-react-app <YOUR_APP_NAME>
+  npx create-react-app <YOUR_APP_NAME> [--template=typescript]
 
   # Launch
   cd <YOUR_APP_NAME>
-  yarn start
-  # or
-  npm run start
+  yarn start  # or | npm run start
   ```
 
   <br>
@@ -129,5 +130,6 @@ yarn -v
 
 - [ ] `tdd-next`
   : basic next application with test library included
+
 - [ ] `tdd-next-ts`
   : porting typescript from `tdd-next`
