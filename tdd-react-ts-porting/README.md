@@ -28,7 +28,7 @@ yarn test    # or | npm run test
 - Use `yarn` script
 
   ```bash
-  # testing-library for react
+  # testing-library for react with typescript
   yarn add --dev \
       typescript \
       @types/node \
