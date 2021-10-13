@@ -1,6 +1,6 @@
-# TDD-React
+# TDD-React-TS-Porting
 
-Basic react application using jest
+Porting typescript from [`tdd-react`](../tdd-react#reademe)
 
 ## How to use
 
@@ -29,15 +29,29 @@ yarn test    # or | npm run test
 
   ```bash
   # testing-library for react
-  yarn add --dev @testing-library/react
+  yarn add --dev \
+      typescript \
+      @types/node \
+      @types/react \
+      @types/react-dom \
+      @types/jest
   ```
 
 - Use `npm` script
 
   ```bash
-  # testing-library for react
-  npm i --save-dev @testing-library/react
+  # testing-library for react with typescript
+  npm i --save-dev \
+      typescript \
+      @types/node \
+      @types/react \
+      @types/react-dom \
+      @types/jest
   ```
+
+## Settings
+
+- [`tsconfig.json`](./tsconfig.json)
 
 <br>
 </details>

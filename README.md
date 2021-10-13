@@ -91,41 +91,42 @@ yarn -v
 
 ### React Application
 
-<details>
-<summary>💫 <b>create-react-app</b></summary>
-<br>
-
-```bash
-# Installing
-npm install -g create-react-app
-
-# Check
-npx create-react-app --version
-```
-
-How to use `create-react-app`
-
-```bash
-# Init
-npx create-react-app <YOUR_APP_NAME>
-
-# Launch
-cd <YOUR_APP_NAME>
-yarn start
-# or
-npm run start
-```
-
-<br>
-</details>
-
 - [`tdd-react`](./tdd-react#readme)
   : Basic react application using jest
 
+- [`tdd-react-ts-porting`](./tdd-react-ts-porting#readme)
+  : porting typescript from `tdd-react`
+
+- <details>
+  <summary>💫 <b>create-react-app</b></summary>
+  <br>
+
+  ```bash
+  # Installing
+  npm install -g create-react-app
+
+  # Check
+  npx create-react-app --version
+  ```
+
+  How to use `create-react-app`
+
+  ```bash
+  # Init
+  npx create-react-app <YOUR_APP_NAME>
+
+  # Launch
+  cd <YOUR_APP_NAME>
+  yarn start
+  # or
+  npm run start
+  ```
+
+  <br>
+  </details>
+
 ### Loadmap
 
-- [ ] `tdd-react-ts`
-  : porting typescript from `tdd-react`
 - [ ] `tdd-next`
   : basic next application with test library included
 - [ ] `tdd-next-ts`
