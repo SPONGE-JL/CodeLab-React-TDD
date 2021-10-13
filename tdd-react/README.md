@@ -6,7 +6,7 @@ Basic react application using jest
 
 ```bash
 # Install Dependencies
-yarn install # or | npm instal
+yarn install # or | npm install
 
 # Run Test
 yarn test    # or | npm run test
@@ -40,4 +40,4 @@ yarn test    # or | npm run test
   ```
 
 <br>
- </details>
+</details>
