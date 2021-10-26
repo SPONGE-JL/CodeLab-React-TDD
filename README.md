@@ -97,7 +97,7 @@ yarn -v
 - [`tdd-react-ts-porting`](./tdd-react-ts-porting#readme)
   : porting typescript from `tdd-react`
 
-- [`tdd-react-ts-template`](./tdd-react-ts-template#readme)
+- [`tdd-react-ts-template`](./tdd-react-ts-template#readme)  
   : Basic react application using `typescript template`
 
 - <details>
