@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+import { TagElem, CssProp } from '../supports/CompTypes';
+
 //- Sytled Component
 interface ButtonContainerProps {
   readonly backgroundColor: string;
@@ -28,10 +30,10 @@ const Label = Styled.div`
 
 //- React Component
 interface ButtonProps {
-  readonly label: string;
+  readonly label: TagElem;
   readonly onClick?: () => void;
-  readonly backgroundColor?: string;
-  readonly hoverColor?: string;
+  readonly backgroundColor?: CssProp;
+  readonly hoverColor?: CssProp;
 }
 
 export const Button = ({ label, onClick, backgroundColor = '#304FFE', hoverColor = '#1639FE' }: ButtonProps) => {

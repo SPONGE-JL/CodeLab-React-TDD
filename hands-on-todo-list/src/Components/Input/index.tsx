@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+import { TagElem, CssProp } from '../supports/CompTypes';
+
 //- Sytled Component
 const InputBox = Styled.input`
   font-size: 16px;
@@ -15,7 +17,7 @@ const InputBox = Styled.input`
 
 //- React Component
 interface InputProps {
-  readonly placeholder?: string;
+  readonly placeholder?: TagElem;
   readonly onChange?: (text: string) => void;
 }
 
