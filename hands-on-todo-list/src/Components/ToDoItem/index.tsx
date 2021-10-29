@@ -2,7 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 
 import { TagElem } from 'Components/supports/CompTypes';
-import { Button } from 'Components';
+import { Button } from 'Components/Button';
 
 //- Sytled Component
 const Container = Styled.div`

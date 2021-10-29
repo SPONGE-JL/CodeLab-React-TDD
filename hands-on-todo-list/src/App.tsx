@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styled from 'styled-components';
 
 import { Button, Input, ToDoItem } from 'Components';
@@ -22,19 +22,50 @@ const Contents = Styled.div`
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 `;
 
+const ToDoItemListContainer = Styled.div`
+  min-width: 350px;
+  height: 400px;
+  overflow: scroll;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  margin-bottom: 20px;
+`;
+
 const InputContainer = Styled.div`
   display: flex;
 `;
 
 //- React Component
 function App() {
+  //- States
+  const [toDo, setToDo] = useState('');
+  const [toDoList, setToDoList] = useState<string[]>([]);
+
+  //- Event Functions
+  const addToDo = (): void => {
+    if (toDo) {
+      setToDoList([...toDoList, toDo]);
+      setToDo('');
+    }
+  };
+  const deleteToDo = (index: number): void => {
+    let list = [...toDoList];
+    list.splice(index, 1);
+    setToDoList(list);
+  };
+
+  //- Render
   return (
     <Container>
       <Contents>
-        <ToDoItem label="Inserted Items" onDelete={() => alert('Click Event! (Delete)')} />
+        <ToDoItemListContainer>
+          {toDoList.map((toDoLabel, index) => (
+            <ToDoItem key={index} label={toDoLabel} onDelete={() => deleteToDo(index)} />
+          ))}
+        </ToDoItemListContainer>
         <InputContainer>
-          <Input placeholder="Insert a new task" onChange={(inputText) => console.log(inputText)} />
-          <Button label="Add" onClick={() => alert('Click Event! (Add)')} />
+          <Input placeholder="Insert a new task" value={toDo} onChange={(inputText) => setToDo(inputText)} />
+          <Button label="Add" onClick={addToDo} />
         </InputContainer>
       </Contents>
     </Container>

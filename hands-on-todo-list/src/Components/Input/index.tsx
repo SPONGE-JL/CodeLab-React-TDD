@@ -18,13 +18,15 @@ const InputBox = Styled.input`
 //- React Component
 interface InputProps {
   readonly placeholder?: TagElem;
+  readonly value?: string;
   readonly onChange?: (text: string) => void;
 }
 
-export const Input = ({ placeholder, onChange }: InputProps) => {
+export const Input = ({ placeholder, value, onChange }: InputProps) => {
   return (
     <InputBox
       placeholder={placeholder}
+      value={value}
       onChange={(event) => {
         if (typeof onChange === 'function') {
           onChange(event.target.value);
