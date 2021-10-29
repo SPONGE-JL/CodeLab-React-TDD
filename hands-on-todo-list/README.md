@@ -3,8 +3,21 @@
 ## How to use
 
 ```bash
+# Install Dependencies
+yarn install # or | npm install
 
+# Run Unit Test
+yarn test    # or | npm run test
+
+# Run Code Coverage Check
+yarn test --coverage # or | npm run test -- --coverage
 ```
+
+- (sample) unit test result  
+  ![jest-unit-test.png](./history/jest-unit-test.png)
+
+- (sample) code coverage result  
+  ![jest-code-coverage.png](./history/jest-code-coverage.png)
 
 <details>
 <summary><h2>History</h2></summary>

@@ -38,34 +38,34 @@ const InputContainer = Styled.div`
 //- React Component
 function App() {
   //- States
-  const [toDo, setToDo] = useState('');
-  const [toDoList, setToDoList] = useState<string[]>([]);
+  const [todo, setTodo] = useState('');
+  const [TodoList, setTodoList] = useState<string[]>([]);
 
   //- Event Functions
-  const addToDo = (): void => {
-    if (toDo) {
-      setToDoList([...toDoList, toDo]);
-      setToDo('');
+  const addTodo = (): void => {
+    if (todo) {
+      setTodoList([...TodoList, todo]);
+      setTodo('');
     }
   };
-  const deleteToDo = (index: number): void => {
-    let list = [...toDoList];
+  const deleteTodo = (index: number): void => {
+    let list = [...TodoList];
     list.splice(index, 1);
-    setToDoList(list);
+    setTodoList(list);
   };
 
   //- Render
   return (
     <Container>
       <Contents>
-        <TodoItemListContainer>
-          {toDoList.map((toDoLabel, index) => (
-            <TodoItem key={index} label={toDoLabel} onDelete={() => deleteToDo(index)} />
+        <TodoItemListContainer data-testid="todoList">
+          {TodoList.map((toDoLabel, index) => (
+            <TodoItem key={index} label={toDoLabel} onDelete={() => deleteTodo(index)} />
           ))}
         </TodoItemListContainer>
         <InputContainer>
-          <Input placeholder="Insert a new task" value={toDo} onChange={(inputText) => setToDo(inputText)} />
-          <Button label="Add" onClick={addToDo} />
+          <Input placeholder="Insert a new task" value={todo} onChange={(inputText) => setTodo(inputText)} />
+          <Button label="Add" onClick={addTodo} />
         </InputContainer>
       </Contents>
     </Container>
