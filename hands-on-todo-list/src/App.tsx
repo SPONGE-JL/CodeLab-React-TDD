@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Styled from 'styled-components';
 
-import { Button, Input, ToDoItem } from 'Components';
+import { Button, Input, TodoItem } from 'Components';
 
 //- Sytled Component
 const Container = Styled.div`
@@ -22,7 +22,7 @@ const Contents = Styled.div`
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 `;
 
-const ToDoItemListContainer = Styled.div`
+const TodoItemListContainer = Styled.div`
   min-width: 350px;
   height: 400px;
   overflow: scroll;
@@ -58,11 +58,11 @@ function App() {
   return (
     <Container>
       <Contents>
-        <ToDoItemListContainer>
+        <TodoItemListContainer>
           {toDoList.map((toDoLabel, index) => (
-            <ToDoItem key={index} label={toDoLabel} onDelete={() => deleteToDo(index)} />
+            <TodoItem key={index} label={toDoLabel} onDelete={() => deleteToDo(index)} />
           ))}
-        </ToDoItemListContainer>
+        </TodoItemListContainer>
         <InputContainer>
           <Input placeholder="Insert a new task" value={toDo} onChange={(inputText) => setToDo(inputText)} />
           <Button label="Add" onClick={addToDo} />

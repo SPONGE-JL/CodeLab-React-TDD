@@ -20,12 +20,12 @@ const Label = Styled.div`
 `;
 
 //- React Component
-interface ToDoItemProps {
+interface TodoItemProps {
   readonly label: TagElem;
-  readonly onDelete: () => void;
+  readonly onDelete?: () => void;
 }
 
-export const ToDoItem = ({ label, onDelete }: ToDoItemProps) => {
+export const TodoItem = ({ label, onDelete }: TodoItemProps) => {
   return (
     <Container>
       <Label>{label}</Label>
