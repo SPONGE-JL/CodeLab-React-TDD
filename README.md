@@ -100,6 +100,9 @@ yarn -v
 - [`tdd-react-ts-template`](./tdd-react-ts-template#readme)  
   : Basic react application using `typescript template`
 
+- [`hands-on-todo-list`](./hands-on-todo-list#readme)  
+  : Sample hands on application with `jest` (unit test & code coverage)
+
 - <details>
   <summary>💫 <b>create-react-app</b></summary>
   <br>

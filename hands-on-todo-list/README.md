@@ -7,11 +7,11 @@
 yarn install
 # or | npm install
 
-# Run Unit Test
+# Unit Test
 yarn test
 # or | npm run test
 
-# Run Code Coverage Check
+# Check Test Coverage
 yarn test --coverage --watchAll
 # or | npm run test -- --coverage --watchAll
 ```
@@ -19,8 +19,8 @@ yarn test --coverage --watchAll
 - Unit Test
   ![jest-unit-test.png](./history/jest-unit-test.png)
 
-- Code Coverage
-  ![jest-code-coverage.png](./history/jest-code-coverage.png)
+- Test Coverage
+  ![jest-test-coverage.png](./history/jest-test-coverage.png)
 
 <details>
 <summary><h2>History</h2></summary>
