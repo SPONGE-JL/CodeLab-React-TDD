@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { TagElem, CssProp } from '../supports/CompTypes';
+import { TagElem } from 'Components/supports/CompTypes';
 
 //- Sytled Component
 const InputBox = Styled.input`

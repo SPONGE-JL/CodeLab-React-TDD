@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { TagElem, CssProp } from '../supports/CompTypes';
+import { TagElem, CssProp } from 'Components/supports/CompTypes';
 
 //- Sytled Component
 interface ButtonContainerProps {

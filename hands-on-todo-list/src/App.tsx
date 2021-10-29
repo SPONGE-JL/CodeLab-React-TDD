@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { Button, Input } from 'Components';
+import { Button, Input, ToDoItem } from 'Components';
 
 //- Sytled Component
 const Container = Styled.div`
@@ -24,8 +24,6 @@ const Contents = Styled.div`
 
 const InputContainer = Styled.div`
   display: flex;
-  width: 50%;
-  min-width: 400px;
 `;
 
 //- React Component
@@ -33,6 +31,7 @@ function App() {
   return (
     <Container>
       <Contents>
+        <ToDoItem label="Inserted Items" onDelete={() => alert('Click Event! (Delete)')} />
         <InputContainer>
           <Input placeholder="Insert a new task" onChange={(inputText) => console.log(inputText)} />
           <Button label="Add" onClick={() => alert('Click Event! (Add)')} />
