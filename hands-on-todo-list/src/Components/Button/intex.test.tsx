@@ -37,7 +37,7 @@ describe('<Button />', () => {
     expect(button).toHaveStyleRule('background-color', hoverColor, { modifier: ':hover' });
   });
 
-  it('has a click event as a button component.', () => {
+  it('can be a click event as a button component.', () => {
     const mockClick = jest.fn();
     render(<Button label="Button Test" onClick={mockClick} />);
 
