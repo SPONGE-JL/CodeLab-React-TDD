@@ -4,19 +4,22 @@
 
 ```bash
 # Install Dependencies
-yarn install # or | npm install
+yarn install
+# or | npm install
 
 # Run Unit Test
-yarn test    # or | npm run test
+yarn test
+# or | npm run test
 
 # Run Code Coverage Check
-yarn test --coverage # or | npm run test -- --coverage
+yarn test --coverage --watchAll
+# or | npm run test -- --coverage --watchAll
 ```
 
-- (sample) unit test result  
+- Unit Test
   ![jest-unit-test.png](./history/jest-unit-test.png)
 
-- (sample) code coverage result  
+- Code Coverage
   ![jest-code-coverage.png](./history/jest-code-coverage.png)
 
 <details>
