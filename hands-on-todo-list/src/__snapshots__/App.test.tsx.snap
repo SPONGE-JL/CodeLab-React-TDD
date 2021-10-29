@@ -99,7 +99,7 @@ exports[`<App /> correctly renders components with empty todoList. 1`] = `
       >
         <input
           class="c4"
-          placeholder="Insert a new task"
+          placeholder="Insert a new todo"
           value=""
         />
         <div

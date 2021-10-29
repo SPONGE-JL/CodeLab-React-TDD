@@ -4,6 +4,10 @@ import 'jest-styled-components';
 
 import { TodoItem } from './index';
 
+enum Presets {
+  Delete = 'Delete',
+}
+
 describe('<TodoItem />', () => {
   it('reders components correctly.', () => {
     const { container } = render(<TodoItem label="Default TodoItem" />);
@@ -11,7 +15,7 @@ describe('<TodoItem />', () => {
     const todoItem = screen.getByText('Default TodoItem');
     expect(todoItem).toBeInTheDocument();
 
-    const deleteButton = screen.getByText('delete');
+    const deleteButton = screen.getByText(Presets.Delete);
     expect(deleteButton).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();
@@ -21,7 +25,7 @@ describe('<TodoItem />', () => {
     const mockClick = jest.fn();
     render(<TodoItem label="Button Test" onDelete={mockClick} />);
 
-    const todoItemButton = screen.getByText('delete');
+    const todoItemButton = screen.getByText(Presets.Delete);
     expect(mockClick).toHaveBeenCalledTimes(0);
     fireEvent.click(todoItemButton);
     expect(mockClick).toHaveBeenCalledTimes(1);

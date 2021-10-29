@@ -29,7 +29,7 @@ export const TodoItem = ({ label, onDelete }: TodoItemProps) => {
   return (
     <Container>
       <Label>{label}</Label>
-      <Button label="delete" onClick={onDelete} />
+      <Button label="Delete" onClick={onDelete} />
     </Container>
   );
 };

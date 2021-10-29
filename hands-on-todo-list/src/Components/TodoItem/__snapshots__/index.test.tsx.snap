@@ -59,7 +59,7 @@ exports[`<TodoItem /> reders components correctly. 1`] = `
       <div
         class="c3"
       >
-        delete
+        Delete
       </div>
     </div>
   </div>

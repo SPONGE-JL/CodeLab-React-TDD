@@ -64,7 +64,7 @@ function App() {
           ))}
         </TodoItemListContainer>
         <InputContainer>
-          <Input placeholder="Insert a new task" value={todo} onChange={(inputText) => setTodo(inputText)} />
+          <Input placeholder="Insert a new todo" value={todo} onChange={(inputText) => setTodo(inputText)} />
           <Button label="Add" onClick={addTodo} />
         </InputContainer>
       </Contents>
