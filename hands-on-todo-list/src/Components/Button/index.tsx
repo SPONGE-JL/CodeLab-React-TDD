@@ -11,10 +11,10 @@ interface ButtonContainerProps {
 
 const ButtonContainer = Styled.div<ButtonContainerProps>`
   text-align: center;
+  cursor: pointer;
   padding: 10px 20px;
   border-radius: 8px;
   background-color: ${(props) => props.backgroundColor};
-  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.hoverColor};
   }
