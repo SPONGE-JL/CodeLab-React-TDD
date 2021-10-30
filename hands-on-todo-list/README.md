@@ -23,7 +23,7 @@ yarn test --coverage --watchAll
   ![jest-test-coverage.png](./history/jest-test-coverage.png)
 
 <details>
-<summary><h2>History</h2></summary>
+<summary>🌟 Recipe</summary>
 
 ### Init
 
