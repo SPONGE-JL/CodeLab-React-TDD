@@ -101,7 +101,10 @@ yarn -v
   : Basic react application using `typescript template`
 
 - [`hands-on-todo-list`](./hands-on-todo-list#readme)  
-  : Sample hands on application with `jest` (unit test & code coverage)
+  : Sample hands on application **(using react `function` type)** with `jest` (unit test & coverage)
+
+- [`hands-on-todo-list-class`](./hands-on-todo-list-class#readme)  
+  : Sample hands on application **(using react `class` type)** with `jest` (unit test & coverage)
 
 - <details>
   <summary>💫 <b>create-react-app</b></summary>
