@@ -1,4 +1,4 @@
-# Hands on :: ToDo List
+# Hands on :: ToDo List (class component)
 
 ## How to use
 
@@ -15,6 +15,12 @@ yarn test
 yarn test --coverage --watchAll
 # or | npm run test -- --coverage --watchAll
 ```
+
+- Unit Test
+  ![jest-unit-test.png](./history/jest-unit-test.png)
+
+- Test Coverage
+  ![jest-test-coverage.png](./history/jest-test-coverage.png)
 
 <details>
 <summary><h2>History</h2></summary>
