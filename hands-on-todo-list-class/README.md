@@ -16,10 +16,10 @@ yarn test --coverage --watchAll
 # or | npm run test -- --coverage --watchAll
 ```
 
-- Unit Test
+- Unit Test  
   ![jest-unit-test.png](./history/jest-unit-test.png)
 
-- Test Coverage
+- Test Coverage  
   ![jest-test-coverage.png](./history/jest-test-coverage.png)
 
 <details>
