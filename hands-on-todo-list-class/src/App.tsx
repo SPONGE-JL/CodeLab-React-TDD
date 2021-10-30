@@ -7,31 +7,36 @@ import { Button, Input, TodoItem } from 'Components';
 const Container = Styled.div`
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 `;
 
 const Contents = Styled.div`
+  width: 50%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   border-radius: 8px;
-  background-color: : #FFFFFF;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #F2F2F2;
+  box-shadow: 5px 5px 10px rgba(48, 36, 36, 0.2);
 `;
 
 const TodoItemListContainer = Styled.div`
+  width: 100%;
   min-width: 350px;
-  height: 400px;
+  height: 50%;
+  min-height: 400px;
   overflow: scroll;
+  margin-bottom: 20px;
   border: 1px solid #BDBDBD;
   border-radius: 8px;
-  margin-bottom: 20px;
+  background-color: #FFFFFF;
 `;
 
 const InputContainer = Styled.div`
+  width: 100%;
   display: flex;
 `;
 
