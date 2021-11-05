@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Styled from 'styled-components';
 
-import { Button, Input, TodoItem } from 'Components';
+import { TodoList, InputBox } from 'Components';
 
 //- Sytled Component
 const Container = Styled.div`
@@ -16,23 +16,12 @@ const Contents = Styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
+  margin: 0% 25%;
   padding: 20px;
   border-radius: 8px;
   background-color: : #FFFFFF;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-`;
-
-const TodoItemListContainer = Styled.div`
-  min-width: 350px;
-  height: 400px;
-  overflow: scroll;
-  border: 1px solid #BDBDBD;
-  border-radius: 8px;
-  margin-bottom: 20px;
-`;
-
-const InputContainer = Styled.div`
-  display: flex;
 `;
 
 //- React Component
@@ -58,15 +47,8 @@ function App() {
   return (
     <Container>
       <Contents>
-        <TodoItemListContainer data-testid="todoList">
-          {todoList.map((toDoLabel, index) => (
-            <TodoItem key={index} label={toDoLabel} onDelete={() => deleteTodo(index)} />
-          ))}
-        </TodoItemListContainer>
-        <InputContainer>
-          <Input placeholder="Insert a new todo" value={todo} onChange={(inputText) => setTodo(inputText)} />
-          <Button label="Add" onClick={addTodo} />
-        </InputContainer>
+        <TodoList todoList={todoList} deleteTodo={deleteTodo} />
+        <InputBox todo={todo} onType={(inputText) => setTodo(inputText)} onAdd={addTodo} />
       </Contents>
     </Container>
   );

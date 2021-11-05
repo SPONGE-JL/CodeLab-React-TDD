@@ -1,5 +1,12 @@
 # Hands on :: ToDo List (Context API)
 
+## Purpose
+
+To manage multiple states and props of many components which are separated in different parent components,
+we can use `pub-sub` pattern like `Flux`. At that point, we need to understand the topic of `Context API`. So, this project is simple use case of the `Context API`.
+
+> _Check points: how to handle the context and test it._
+
 ## How to use
 
 ```bash
