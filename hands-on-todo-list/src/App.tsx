@@ -39,17 +39,17 @@ const InputContainer = Styled.div`
 function App() {
   //- States
   const [todo, setTodo] = useState('');
-  const [TodoList, setTodoList] = useState<string[]>([]);
+  const [todoList, setTodoList] = useState<string[]>([]);
 
   //- Event Functions
   const addTodo = (): void => {
     if (todo) {
-      setTodoList([...TodoList, todo]);
+      setTodoList([...todoList, todo]);
       setTodo('');
     }
   };
   const deleteTodo = (index: number): void => {
-    let list = [...TodoList];
+    let list = [...todoList];
     list.splice(index, 1);
     setTodoList(list);
   };
@@ -59,7 +59,7 @@ function App() {
     <Container>
       <Contents>
         <TodoItemListContainer data-testid="todoList">
-          {TodoList.map((toDoLabel, index) => (
+          {todoList.map((toDoLabel, index) => (
             <TodoItem key={index} label={toDoLabel} onDelete={() => deleteTodo(index)} />
           ))}
         </TodoItemListContainer>
