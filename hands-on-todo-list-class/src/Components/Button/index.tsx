@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Styled from 'styled-components';
 
 import { TagElem, CssProp } from 'Components/supports/CompTypes';
@@ -36,10 +36,14 @@ interface ButtonProps {
   readonly hoverColor?: CssProp;
 }
 
-export const Button = ({ label, onClick, backgroundColor = '#304FFE', hoverColor = '#1639FE' }: ButtonProps) => {
-  return (
-    <ButtonContainer onClick={onClick} backgroundColor={backgroundColor} hoverColor={hoverColor}>
-      <Label>{label}</Label>
-    </ButtonContainer>
-  );
-};
+export class Button extends Component<ButtonProps> {
+  render() {
+    const { label, onClick, backgroundColor = '#304FFE', hoverColor = '#1639FE' } = this.props;
+
+    return (
+      <ButtonContainer onClick={onClick} backgroundColor={backgroundColor} hoverColor={hoverColor}>
+        <Label>{label}</Label>
+      </ButtonContainer>
+    );
+  }
+}

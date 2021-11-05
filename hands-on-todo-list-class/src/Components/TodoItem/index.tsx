@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Styled from 'styled-components';
 
 import { TagElem } from 'Components/supports/CompTypes';
@@ -25,11 +25,14 @@ interface TodoItemProps {
   readonly onDelete?: () => void;
 }
 
-export const TodoItem = ({ label, onDelete }: TodoItemProps) => {
-  return (
-    <Container>
-      <Label>{label}</Label>
-      <Button label="Delete" onClick={onDelete} />
-    </Container>
-  );
-};
+export class TodoItem extends Component<TodoItemProps> {
+  render() {
+    const { label, onDelete } = this.props;
+    return (
+      <Container>
+        <Label>{label}</Label>
+        <Button label="Delete" onClick={onDelete} />
+      </Container>
+    );
+  }
+}

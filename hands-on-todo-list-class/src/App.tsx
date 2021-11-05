@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Styled from 'styled-components';
 
 import { Button, Input, TodoItem } from 'Components';
@@ -41,40 +41,62 @@ const InputContainer = Styled.div`
 `;
 
 //- React Component
-function App() {
-  //- States
-  const [todo, setTodo] = useState('');
-  const [TodoList, setTodoList] = useState<string[]>([]);
+interface AppProps {}
 
-  //- Event Functions
-  const addTodo = (): void => {
-    if (todo) {
-      setTodoList([...TodoList, todo]);
-      setTodo('');
-    }
-  };
-  const deleteTodo = (index: number): void => {
-    let list = [...TodoList];
-    list.splice(index, 1);
-    setTodoList(list);
-  };
+interface AppState {
+  readonly todo: string;
+  readonly todoList: string[];
+}
+
+export class App extends Component<AppProps, AppState> {
+  //- Initiation States
+  constructor(props: AppProps) {
+    super(props);
+
+    this.state = {
+      todo: '',
+      todoList: [],
+    };
+  }
 
   //- Render
-  return (
-    <Container>
-      <Contents>
-        <TodoItemListContainer data-testid="todoList">
-          {TodoList.map((toDoLabel, index) => (
-            <TodoItem key={index} label={toDoLabel} onDelete={() => deleteTodo(index)} />
-          ))}
-        </TodoItemListContainer>
-        <InputContainer>
-          <Input placeholder="Insert a new todo" value={todo} onChange={(inputText) => setTodo(inputText)} />
-          <Button label="Add" onClick={addTodo} />
-        </InputContainer>
-      </Contents>
-    </Container>
-  );
+  render() {
+    const { todo, todoList } = this.state;
+    return (
+      <Container>
+        <Contents>
+          <TodoItemListContainer data-testid="todoList">
+            {todoList.map((toDoLabel, index) => (
+              <TodoItem key={index} label={toDoLabel} onDelete={() => this.deleteTodo(index)} />
+            ))}
+          </TodoItemListContainer>
+          <InputContainer>
+            <Input placeholder="Insert a new todo" value={todo} onChange={(inputText) => this.setState({ todo: inputText })} />
+            <Button label="Add" onClick={this.addTodo} />
+          </InputContainer>
+        </Contents>
+      </Container>
+    );
+  }
+
+  //- Event Functions
+  private addTodo = (): void => {
+    const { todo, todoList } = this.state;
+
+    if (todo) {
+      this.setState({
+        todo: '',
+        todoList: [...todoList, todo],
+      });
+    }
+  };
+
+  private deleteTodo = (index: number): void => {
+    const { todoList } = this.state;
+    let list = [...todoList];
+    list.splice(index, 1);
+    this.setState({ todoList: list });
+  };
 }
 
 export default App;
