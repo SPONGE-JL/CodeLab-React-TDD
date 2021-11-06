@@ -87,24 +87,31 @@ yarn -v
 <br>
 </details>
 
-## Samples
+## Sample React Applications
 
-### React Application
+### Basic App
+
+Basically the project on below list are test with `jest` (unit test & coverage).
 
 - [`tdd-react`](./tdd-react#readme)
   : Basic react application using jest
 
 - [`tdd-react-ts-porting`](./tdd-react-ts-porting#readme)
-  : porting typescript from `tdd-react`
+  : porting typescript from `tdd-react` (convert from [`tdd-react`](./tdd-react#readme) project)
 
 - [`tdd-react-ts-template`](./tdd-react-ts-template#readme)  
   : Basic react application using `typescript template`
 
+### TodoList App
+
 - [`hands-on-todo-list`](./hands-on-todo-list#readme)  
-  : Sample hands on application **(using react `function` type)** with `jest` (unit test & coverage)
+  : Sample application **(using react `function` type)**
 
 - [`hands-on-todo-list-class`](./hands-on-todo-list-class#readme)  
-  : Sample hands on application **(using react `class` type)** with `jest` (unit test & coverage)
+  : Sample application **(using react `class` type)** (convert from [`hands-on-todo-list`](./hands-on-todo-list#readme) project)
+
+- [`hands-on-todo-list-context`](./hands-on-todo-list-context#readme)  
+  : Sample application **(using `Context API`, `Storage`)** (develop from [`hands-on-todo-list`](./hands-on-todo-list#readme) project)
 
 - <details>
   <summary>💫 <b>create-react-app</b></summary>
