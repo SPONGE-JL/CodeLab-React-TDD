@@ -131,11 +131,3 @@ yarn -v
 
   <br>
   </details>
-
-### Loadmap
-
-- [ ] `tdd-next`
-  : basic next application with test library included
-
-- [ ] `tdd-next-ts`
-  : porting typescript from `tdd-next`
